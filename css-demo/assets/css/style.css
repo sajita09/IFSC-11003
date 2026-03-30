@@ -3,13 +3,11 @@ html{
   box-sizing:border-box;
 }
 *,
-*:before,
-*:after{
-  
-
+*: before,
+*: after{
 box-sizing: inherit;
 }
-
+  
 
 
 /*-------Responsive Images ---------*/
@@ -22,6 +20,13 @@ img{
   max-width:960px;
   width:80vw;
   margin:20px auto;
+}
+.img-right{
+  float:left;
+  margin:10px 0 10px 0px;
+  border:1px solid #c0c0c0;
+  padding:10px;
+  max-width:33%;
 }
 
 /* Skip Link utility:hidden until focused */
@@ -39,13 +44,13 @@ img{
 
 
 /* Make skip link visible when keyboard users tab to it */
-
+.visually-hidden:focus,
 .visually-hidden:focus-visible{
   clip:auto;
   height:auto;
   width:auto;
   margin:0;
-  padding:10pz 14px;
+  padding:10px 14px;
   position:absolute;
   left:10px;
   top:10px;
@@ -93,7 +98,7 @@ header.primary h1{
   margin:0;
 }
 header.primary p.subtitle{
-  font-size:1.3;
+  font-size:1.3rem;
   margin:0;
   letter-spacing:.2px;
 }
@@ -120,7 +125,7 @@ nav.primary ul li a:hover{
 }
 
 
-#content h2{
+#content h2, #practice h2{
   color:#3b638b;
   border-bottom:1px dashed #c0c0c0;
 }
@@ -130,7 +135,15 @@ nav.primary ul li a:hover{
 }
 
 #blog{
-  
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+  border-top: 1px solid #c0c0c0;
+  margin-top:20px;
+  border-bottom:1px solid #c0c0c0;
+  padding-bottom:20px;
 }
 #blog-content{
   display:flex;
@@ -138,12 +151,13 @@ nav.primary ul li a:hover{
   justify-content:space-between;
   gap:20px;
   flex-wrap:wrap;
+  
 }
 figure{
  margin:0;
 }
 #blog article.post{
-  box-shadow:0 4px 8px rgba(0,0,0,6);
+  box-shadow:0 4px 8px rgba(0,0,0,0.2px);
   padding:10px;
   font-size:.8rem;
   flex:1;
@@ -151,7 +165,7 @@ figure{
 #blog-content .post img{
   max-width: 100%;
 } 
-h2#recent-post{
+h2#recent-posts{
   flex:0 0 100%;
 }
 
@@ -163,7 +177,63 @@ article.post time, article.post figcaption{
 article.post a{
   color:#3b638b;
 }
+#practice a{
+  color:#3b638b;
+  
+}
 
+#practice a:hover{
+  text-decoration:none;
+}
+
+#practice h3{
+  border-left:10px solid #3b638b;
+} 
+table{
+  width:100%;
+  border:1px solid #c0c0c0;
+  border-collapse:collapse;
+}
+caption{
+  font-weight:bold;
+  margin:10px;
+  
+}
+td{
+  border:1px solid #c0c0c0;
+}
+tr:nth-child(even){
+    background-color:green;
+}
+
+th{
+  background-color:green;
+  color:#ffffff;
+  
+}
+#practice h4 {
+  margin:20px 0 10px
+ color:#ffffff;
+}
+#practice table{
+  width:100%;
+  border:1px solid #c0c0c0;
+  border-collapse:collapse;
+  
+}
+#practice caption{
+  font-weight:bold;
+  margin:10px;
+  
+}
+td{
+  border:1px solid #c0c0c0;
+}
+
+th{
+  background-color:green;
+  color:#ffffff;
+}
 aside[aria-label="sidebar"]{
   background-color:#172635;
   color:#ffffff;
@@ -177,7 +247,7 @@ aside .container{
   gap:40px;
 }
 
-aside.conatainer a{
+aside.container a{
   color:#ffffff;
 }
 aside footer{
@@ -185,12 +255,92 @@ aside footer{
  
 }
 
-aside.conatainer a{
+aside.container a{
   color:#ffffff;
   display:block;
   text-align:right;
   margin-top:20px;
 }
+
+* Paragraph styling */
+#practice p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Headings */
+#practice h3 {
+  margin-top: 25px;
+  color: #3b6b8b;
+}
+
+#practice h4 {
+  margin-top: 20px;
+  color: #555;
+}
+
+/* Ordered List */
+#practice ol {
+  margin: 15px 0;
+  padding-left: 25px;
+}
+
+#practice ol li {
+  margin-bottom: 5px;
+}
+
+/* Unordered List */
+#practice ul {
+  margin: 15px 0;
+  padding-left: 25px;
+}
+
+#practice ul li {
+  margin-bottom: 5px;
+}
+
+/* Nested list */
+#practice ul ul {
+  margin-top: 5px;
+  list-style-type: circle;
+}
+
+/* Description List */
+#practice dl {
+  margin: 20px 0;
+}
+
+#practice dt {
+  font-weight: bold;
+  margin-top: 10px;
+  color: #000;
+}
+
+#practice dd {
+  margin-left: 20px;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* Blockquote */
+#practice blockquote {
+  margin: 20px 0;
+  padding: 15px 20px;
+  background-color: #f4f4f4;
+  border-left: 5px solid #3b6b8b;
+  font-style: italic;
+  color: #333;
+}
+
+/* Citation */
+#practice cite {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
 
 footer.primary{
  background-color:#3b6b8b;
@@ -207,10 +357,10 @@ footer.primary{
   flex-direction:column;
   justify-content:space-around;
     gap:10px;
-  
+  }
 }
   nav.primary a{
     display:block;
   }
   
-}
+ 
