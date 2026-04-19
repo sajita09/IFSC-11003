@@ -32,7 +32,29 @@
       gap: 20px;
       max-width: 80vw;
       margin: 20px auto;
+      /* grid-template-columns:4fr; */
+      gap: 10px;
     }
+    header.primary{
+  grid-row-start:1;
+  grid-column-start:1;
+  grid-row-end:3;
+  grid-column-end:3;
+}
+#blog{
+  grid-area:blog;
+}
+#content{
+  grid-area:content;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+}
+aside{
+  grid-area:aside;
+}
   </style>
 
 </head>
@@ -64,7 +86,7 @@
       <h2>Aside</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia non eaque dolorum sequi velit molestiae ratione ducimus ipsum excepturi atque.</p>
     </aside>
-    <footer class="primary">Site Footer</footer>
+    <footer class="footer">Site Footer</footer>
   </main>
 </body>
 
