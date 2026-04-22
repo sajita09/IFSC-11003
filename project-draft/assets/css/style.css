@@ -126,5 +126,8 @@ aside .container {
   header h1 a {
     text-decoration:none;
   }
-
+#article h2 a{
+  text-decoration:none;
+  text-align:center;
+}
   
