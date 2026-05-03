@@ -131,3 +131,71 @@ aside .container {
   text-align:center;
 }
   
+
+
+
+
+
+  #faq{
+    margin:40px auto;
+    padding:20px;
+  
+  }
+  #faq h2 {
+    text-align:center;
+    margin-bottom:20px;
+    color:#8B0000;
+  }
+  .faq-item{
+    background-color:#f9f9f9 ;
+    border-left: 10px solid #8B0000;
+    padding:15px 20px;
+    margin-bottom: 15px;
+    transition:transform 0,2s ease;
+  }
+  .faq-item:hover {
+  transform: translateY(-3px);
+}
+
+.faq-item h3 {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.faq-item p {
+  margin: 0;
+  color: #555;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+
+.timeline h3{
+  text-align: left;
+  color:hwb(118 6% 14%);
+}
+
+.timeline{
+  margin-top: 30px;
+  border-left: 6px solid #8B0000;
+  padding-left:20px;
+  
+}
+
+.timeline-item h4 {
+  margin-bottom: 5px;
+  color: lab(2.07% 1.9 0.67);
+
+}
+.timeline-item p {
+  color: #1b1414;
+  line-height: 1.6;
+}
+.timeline-item {
+  margin-bottom: 25px;
+  position: relative;
+}
