@@ -17,6 +17,8 @@ html{
 *:after{
   box-sizing:inherit;
 }
+
+
 /* -----------Responsive Images-----------------*/
 img{
   max-width:100;
@@ -30,6 +32,12 @@ figcaption {
   font-size: 0.9rem;
 }
 
+#article .container{
+   display: grid;
+  gap: 1.5rem;
+
+  
+}
 #hero {
   padding: 30px 0;
   text-align: center;
@@ -50,7 +58,7 @@ figcaption {
 body {
   font-family: 'Lato', sans-serif;
   line-height: 1.6;
-  background-color: #1e1e1e;
+  background-color: oklab(39.166000000000004% -0.09874 0.06993);
    color: #f5f5f5;
 
 }
@@ -152,7 +160,7 @@ section#content tr:hover{
 
 
 #article{
-   background: #b1b676;
+   background:oklab(39.166000000000004% -0.09874 0.06993);
   padding: 40px 0;
 }
 #article.container h2 a{
@@ -279,3 +287,8 @@ aside .container {
 }
 
 
+
+
+.widget h3{
+  color:
+}
