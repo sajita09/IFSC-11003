@@ -1,17 +1,10 @@
 
-/*
-#914e8c
-#edddeb
-#d9b9bc
-#b1b676
-*/
-
-/* -----------Box sizing-----------------*/
-html{
-  box-sizing:border-box;
+* {
   margin: 0;
-  padding:0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after{
@@ -19,38 +12,14 @@ html{
 }
 
 
-/* -----------Responsive Images-----------------*/
-img{
-  max-width:100;
-  height:auto;
-  border-radius: 5px;
-}
 
-figcaption {
-  margin-top: 5px;
-  font-style: italic;
-  font-size: 0.9rem;
-}
 
-#article .container{
-   display: grid;
-  gap: 1.5rem;
 
-  
-}
-#hero {
-  padding: 30px 0;
-  text-align: center;
-}
 
-.img-center {
-  display: block;
-  margin: auto;
-}
 /* -----------Utility Styles-----------------*/
 .container {
   width: 90%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin:auto;
   
 }
@@ -58,162 +27,249 @@ figcaption {
 body {
   font-family: 'Lato', sans-serif;
   line-height: 1.6;
-  background-color: oklab(39.166000000000004% -0.09874 0.06993);
+  background-color: #0d0d0d;
    color: #f5f5f5;
-
-}
+  }
  
 header.primary {
   background: #8B0000 ;
   color: white;
   text-align: center;
-  padding: 20px 0;
-  
-  
-  
+  padding: 25px 0;
 }
-
-header h1 a {
+header.primary h1{
+  font-size:3rem;
+  margin-bottom:10px;
+}
+  
+header.primary h1 a {
   font-family: 'Goldman', cursive;
   font-size: 4.5rem;
   color: white;
   text-decoration: none;
 }
-header h2 {
-  font-size: 1.2rem;
-  margin-top: 5px;
-  font-weight: normal;
+header.primary h2 {
+  font-size: 1.3rem;
+ font-weight: normal;
+  margin-bottom:20px;
 }
+
+
+
+
 
 nav ul {
   list-style: none;
-  margin-top: 15px;
-}
-
-nav ul li {
-  display: inline-block;
-  margin: 0 10px;
+ display:flex;
+  justify-content: center;
+  flex-wrap:wrap;
+  gap:20px;
 }
 
 nav ul li a {
+  background:rgba(255,255,255,0.15);
+  padding: 10px 18px;
   color: #fff;
+  border-radius: 20px;
   text-decoration: none;
   font-weight: bold;
+  transition:0.5s;
 }
 
-nav ul li a:hover,
-nav ul li a:focus {
-  text-decoration: none;
+nav ul li a:hover{
+background:white;
+color: #8b0000;
+ text-decoration:none;
 }
 
-/* ------------- Content --------------- */
+
+
+
 section#content {
-  padding: 40px 0;
+  background: rgba(255,255,255,0.15);
+  margin-top: 40px;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
+
 
 section#content h2{
   font-family: "Goldman", cursive;
   color:#ffcc00 ;
+  font-size: 2rem;
 }
 
-section#content h3{
-  font-family: "Goldman", cursive;
-  color: #8C3C2A;
-  font-size:1.5rem;
+#content p {
+  margin-bottom: 18px;
+  font-size: 1.05rem;
 }
-
-section#content table{
-  width:100%;
-  border: 1px solid ;
-  border-collapse:collapse;
-}
-
-section#content caption{
-  font-weight:bold;
-  font-size:1.5rem;
-  margin:10px;
-  font-family: "Goldman", cursive;
-  font-size: 2em;
-  color: #33536b;
-}
-
-section#content th {
-  background:#181C1F;
-  color:#edddeb;
-  text-align:left;
-  padding:10px;
-}
-
-section#content td{
-  border:1px solid #c0c0c0;
-  padding:5px;
-}
-
-section#content tr:nth-child(even){
-  background:#DCDCDC;
-}
-
-section#content tr:hover{
-  background:#8EA6B8;
-}
-
 
 
 #article{
-   background:oklab(39.166000000000004% -0.09874 0.06993);
-  padding: 40px 0;
+   background:oklab(17.304% 0 -0.00002);
+  margin-top:50px;
 }
-#article.container h2 a{
-   text-align: center;
+
+#article h2{
+grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 20px;
+  
 }
+
+
+
  #articles .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
+  
+   
+   #article h2 a{
+    font-family: "Goldman", cursive;
+     text-decoration: none;
+     text-align:center;
+  color:#ffcc00;
+  font-size: 2rem;
+   }
+
+
 
 .post {
-  margin-bottom: 30px;
-  background: #2a2a2a;
-  padding: 20px;
-  border-radius: 8px;
+  background: white;
+  color:black;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
 }
 
+.post:hover {
+  transform: translateY(-8px);
+}
+
+.post header {
+  text-align: center;
+}
+.post img {
+  width: 100%;
+  height: auto;
+}
 .post h2 {
-  margin-top: 10px;
-  color: #ffcc00;
+  font-size: 1.4rem;
+  margin: 15px 0;
+  color: #8b0000;
 }
-
+.post h2 ul li{
+  text-align: center;
+  color:rgb(242, 226, 82);
+}
+figcaption {
+  background: #8b0000;
+  color: rgb(11, 11, 11);
+  padding: 8px;
+  font-size: 0.9rem;
+}
 
 .post ul {
-  margin-top: 10px;
-  padding-left: 20px;
+  padding: 20px;
+}
+
+.post ul li {
+  margin-bottom: 10px;
+}
+
+#hero {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#hero img {
+  width: 100%;
+  border-radius: 15px;
+  max-height: 500px;
+ box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.img-center {
+  display: block;
+  margin: auto;
+}
+
+
+aside{
+  margin-top:50px;
+}
+
+aside .container {
+  display: grid;
+grid-template-columns: 1fr 1fr;
+  gap: 5px;
+}
+
+
+.widget{
+   background:white;
+   color:black;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1)
+}
+
+.widget h2 {
+  color: #8b0000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table tr {
+  border-bottom: 1px solid #b32d2d;
+}
+
+table td {
+  padding: 15px 10px;
+}
+
+table td:last-child {
+  text-align: right;
+  font-weight: bold;
+  color: #8b0000;
 }
 
 
 
+footer {
+  margin-top: 50px;
+  background: hsl(0, 2%, 26%);
+  color: #eaa9a9;
+  text-align: center;
+  padding: 25px 15px;
+}
 
-
-
-
+footer a {
+  color: #ffb3b3;
+  text-decoration: none;
+}
 
 footer a:hover {
-  text-decoration:none;
+  text-decoration: underline;
 }
+
+footer p {
+  margin: 10px 0;
+}
+
 aside .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
-
-  header h1 a {
-    text-decoration:none;
-  }
-#article h2 a{
-  text-decoration:none;
-  text-align:center;
-}
-  
 
 
 
@@ -234,10 +290,10 @@ aside .container {
     border-left: 10px solid #8B0000;
     padding:15px 20px;
     margin-bottom: 15px;
-    transition:transform 0,2s ease;
+ transition: transform 0.2s ease;
   }
   .faq-item:hover {
-  transform: translateY(-3px);
+  transform: translate(-3px);
 }
 
 .faq-item h3 {
@@ -285,6 +341,13 @@ aside .container {
   margin-bottom: 25px;
   position: relative;
 }
+
+
+
+
+
+
+
 
 
 
